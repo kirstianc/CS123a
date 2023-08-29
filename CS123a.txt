@@ -1,0 +1,146 @@
+CS123a
+
+Bioinformatics definition
+ - intersection of 3 disciplines, sciences (biology/chem) + cs (computation) + math (biostatistics)
+ - anthing relating to biological data (processing, storing, computation, creating models, etc)
+ - python 3.10(?)
+
+bio central dogma, how we go from blue print to worker bees (DNA to protein)
+
+DNA - transcription -> mRNA - translation -> protein
+
+transcription -> RNA polymerase duplicates specific DNA strand -> replace Thymine (T) w Uracil (U) --> pre-mRNA 
+
+alternative splicing of pre-mRNA after transcripting (removes unnecessary RNA pieces) --> mRNA
+
+eukaryote (higher lvl organisms)
+- has nucleus (contains DNA), 
+- animal/plants
+
+prokaryote (single celled organism)
+- no cell nucleus, 
+- archea/bacteria
+
+archea 
+- live in extreme domains
+
+nucleotide (building block of DNA)
+- phosphate, sugar, base (letter)
+- if no phosphate -> nucleoside
+
+in DNA OH (hydroxal only in third position 3')
+in RNA OH (hydroxal in third position 3' and second position 2')
+
+bases are bonded with hydrogen
+A-T (double hydrogen bonds)
+C-G (triple hydrogen bonds)
+
+purine (Guanine and Adenine)
+- 2 cyclogroups (two circles of molecules)
+
+pyrimidine (Cytosine, Uracil, Thymine)
+- 1 cyclogroup (one circle of molecules)
+
+a purine always pairs w pyrimidine and vice versa (mutations can lead to wrong pairings --> bad problems but body usually catches)
+
+phosphates connect using 3' and 5'
+
+3' end of chain and 5' end of chain (inverse order for other side of DNA)
+
+genome set of all instructions
+
+DNA replication -> partial conservation (since DNA strand in half, molecules create other half using corresponding purines/pyrimidines)
+
+mistakes occur every ~10^9 nucleotides copied
+- homologous recombination: nick (gap) in original DNA code, open strands -> strand invasion where duplicated strand acts as original part of DNA
+	- can be good (mutation) but usually bad
+- chromosome crossing over occurs in meiosis
+
+Transcription
+- rRNA, mRNA, tRNA, miRNA, ribozyme, U1RNA
+
+5' - 3'
+- upstream - negative 
+- downstream - positive 
+
+3' - 5'
+- upstream - positive
+- downstream - negative
+
+potential problems w transcription
+- mutation in genes
+- missing or pre-mature stop signals
+
+pre-mRNA -> mRNA (inside cell nucleus)
+- exon (needed dna sequence)
+- intron (unncessary dna sequence)
+
+DNA replication involves extending a complementary DNA strand
+- dATP, dGTP, dCTP, dTTP
+- involves performing a nucleophilic attack (explain??)
+
+Triples of RNA (codon) specify amino acid (e.g. AUG = M, AAA = K...)
+- only one start codon
+- can have multiple stop codons
+- built in redundancies (e.g. UUU = UUC = same amino acid) for protection
+
+RNA polymerase looks for DNA template strand 3'-->5' direction
+transcription is 3'-->5' direction but generates pre-mRNA in 5'-->3' direction 
+---------------------------------------------
+Exercise:
+What is the amino acid (AA) sequence that would be formed from the following DNA sequence? Show the mRNA sequence.
+3'-TACGCCTATTTCAACAGGCGCGGGACT-5'
+
+	5'-AUG CGG AUA AAG UUG UCG GCG CCC UGA-3'
+	   Met Arg Ile Lys Leu Ser Ala Pro Stop
+	   M   R   I   K   L   S   A   P   *
+
+Is this the only DNA sequence that can produce the AA sequence? If not, provide an alternative.
+
+	No, you can have multiple codon sequences that produce the same AA sequence.
+	e.g. ATG AGA ATT AAA CTT TCT GCT CCA TAA
+		Met Arg Ile Lys Leu Ser Ala Pro Stop
+		M   R   I   K   L   S   A   P   *
+
+What is the sense strand sequence that might have resulted in the following AA sequence? Are there other possible sense strands?
+MPPKILLQETTVFLDG
+
+	ATG CCC AAA GAA TTG GAA CAA TTA GAC
+
+---------------------------------------------
+
+Missense mutation
+- change in one nucleotide
+- can be good or bad
+- e.g. sickle cell anemia (glutamic acid -> valine)
+
+Nonsense mutation
+- change in one nucleotide
+- premature stop codon
+- e.g. cystic fibrosis (glutamic acid -> stop codon)
+
+Deletion mutation
+- deletion of one nucleotide
+- e.g. cystic fibrosis (glutamic acid -> stop codon)
+
+Duplication mutation
+- duplication of one nucleotide
+- e.g. cystic fibrosis (glutamic acid -> stop codon)
+
+Frameshift mutation
+- insertion or deletion of one nucleotide
+- e.g. Tay-Sachs disease (hexosaminidase A)
+
+Repeat Expansion mutation
+- insertion of one or more nucleotides
+- e.g. Huntington's disease (huntingtin protein)
+---------------------------------------------
+
+Foundation of Amino Acids
+- amino acids bond using peptide bonds
+- hydrophobic sides bend inwards, hydrophilic sides bend outwards --> leading to shapes
+- shape determines function, function determines shape
+
+Chaperonins (double checks folded proteins)
+- help fold proteins 
+
