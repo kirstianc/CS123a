@@ -86,7 +86,7 @@ Triples of RNA (codon) specify amino acid (e.g. AUG = M, AAA = K...)
 
 RNA polymerase looks for DNA template strand 3'-->5' direction
 transcription is 3'-->5' direction but generates pre-mRNA in 5'-->3' direction 
----------------------------------------------
+------------------------------------------------------------------------------------------
 Exercise:
 What is the amino acid (AA) sequence that would be formed from the following DNA sequence? Show the mRNA sequence.
 3'-TACGCCTATTTCAACAGGCGCGGGACT-5' --> template strand
@@ -143,4 +143,37 @@ Foundation of Amino Acids
 
 Chaperonins (double checks folded proteins)
 - help fold proteins (refolds if necessary basically)
+
+------------------------------------------------------------------------------------------
+n-terminus: amino group (start)
+c-terminus: carboxyl group (end)
+residues: amino acids in a protein
+
+Polypeptide v Protein
+- 100< amino acids = polypeptide
+- 100>= amino acids = protein
+
+Primary structure (sequence of AA)
+- peptide bonds between amino acids (the order)
+
+Secondary structure (alpha helix, beta sheet)
+- hydrogen bonds between amino acids (the shape)
+- alpha helix: spiral shape
+- beta sheet: flat shape
+
+Tertiary structure (3D shape)
+- multiple combinations of secondary structures to form protein in 3D shape
+
+Quaternary structure (multiple polypeptides)
+- polypeptides that are physically close to each other to form the protein
+
+(what are the white segments of the figures shown?)
+- bends and turns in the protein, lot of interactions (with other molecules) occur at these points
+
+- usually inside are hydrophobic, outside are hydrophilic
+---------------------------------------------
+Protein-Related DBs (PDB)
+- RCSB PDB (Research Collaboratory for Structural Bioinformatics Protein Data Bank)
+- EMBD (European Molecular Biology Laboratory)
+
 
