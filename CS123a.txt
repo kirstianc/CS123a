@@ -89,7 +89,7 @@ transcription is 3'-->5' direction but generates pre-mRNA in 5'-->3' direction
 ---------------------------------------------
 Exercise:
 What is the amino acid (AA) sequence that would be formed from the following DNA sequence? Show the mRNA sequence.
-3'-TACGCCTATTTCAACAGGCGCGGGACT-5'
+3'-TACGCCTATTTCAACAGGCGCGGGACT-5' --> template strand
 
 	5'-AUG CGG AUA AAG UUG UCG GCG CCC UGA-3'
 	   Met Arg Ile Lys Leu Ser Ala Pro Stop
@@ -137,10 +137,10 @@ Repeat Expansion mutation
 ---------------------------------------------
 
 Foundation of Amino Acids
-- amino acids bond using peptide bonds
+- Ribosome uses RNA to make proteins --> chains of amino acids bonded using peptide bonds (covalent bonds of carbon and nitrogen)
 - hydrophobic sides bend inwards, hydrophilic sides bend outwards --> leading to shapes
 - shape determines function, function determines shape
 
 Chaperonins (double checks folded proteins)
-- help fold proteins 
+- help fold proteins (refolds if necessary basically)
 
