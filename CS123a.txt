@@ -176,4 +176,50 @@ Protein-Related DBs (PDB)
 - RCSB PDB (Research Collaboratory for Structural Bioinformatics Protein Data Bank)
 - EMBD (European Molecular Biology Laboratory)
 
+------------------------------------------------------------------------------------------
+Bioinformatics, 3 Views
+1. The cell - DNA, RNA, protein
+2. The organism - changes over time, evolution
+3. The tree of life - 3 branches (eukaryotes, bacteria, archaea)
 
+Key Bioinfo Websites
+- NCBI (National Center for Biotechnology Information): GenBank, PubMed, BLAST
+- EMBL (European Molecular Biology Laboratory): ENA, UniProt, InterPro
+- DDBJ (DNA Data Bank of Japan)
+
+cDNA (complementary DNA)
+- DNA sequence produced from backtracking from a protein
+
+EST (expressed sequence tag)
+- short sub-sequence of a cDNA sequence
+
+Genomic Context (e.g. HBB)
+- Location: 11p15.4 (chromosome 11, short arm (p), block 15, sub-block 4)
+	- centromere: middle of chromosome
+		: p = short arm/side, q = long arm/side
+		: lower # = closer to centromere, higher # = farther from centromere
+		: banding (blocking) pattern (e.g. 11p15.4) = block 15, sub-block 4
+		: when given base pairs, start from end of chromosome
+- Exon count: 3
+- if says "complement", then the sequence is reversed in the db (i.e. 3'-5' instead of 5'-3')
+
+Accession Numbers
+- NG_: gene
+- NC_: chromosome
+- NM_: mRNA
+- NP_: protein
+
+
+GENOMIC EXERCISE (RBP4)
+Accession #: NG_009104
+Gene ID #: 5950
+Number of Nucleotides: 16401
+Last updated: 24-AUG-2020
+Location: 10q23.33 (chromosome 10, long arm (q), block 23, sub-block 33)
+Number of Exons: 8
+Any synonyms, if so what are they: MCOPCB10; RDCCAS; BMIQ10; GPR120; GPR129; GT01; O3FAR1; PGR4
+From FASTA file, what is the start position of the first coding region
+(i.e. how many nucleotides from the first nucelotide does AUG start): 79
+
+
+------------------------------------------------------------------------------------------
