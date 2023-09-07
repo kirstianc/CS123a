@@ -209,7 +209,7 @@ Accession Numbers
 - NM_: mRNA
 - NP_: protein
 
-
+---------------------------------------------
 GENOMIC EXERCISE (RBP4)
 Accession #: NG_009104
 Gene ID #: 5950
@@ -221,5 +221,18 @@ Any synonyms, if so what are they: MCOPCB10; RDCCAS; BMIQ10; GPR120; GPR129; GT0
 From FASTA file, what is the start position of the first coding region
 (i.e. how many nucleotides from the first nucelotide does AUG start): 79
 
-
 ------------------------------------------------------------------------------------------
+BRAF - GenBank Exercise
+Accession #: NG_007873
+Gene ID #: 673
+Chromosome #: 7
+Last Updated: 6-Sep-2023
+Location: 7q34 (chromosome 7, long arm (q), block 34)
+Length: 212438 bp
+Number of Exons: 24
+Any synonyms, if so what are they: NS7; B-raf; BRAF1; RAFB1; B-RAF1; BRAF-1
+From FASTA file, what is the start position of the first coding region? 0
+---------------------------------------------
+check version history: "?report=girevhist"
+regular -> ATG; complement -> TAC
+---------------------------------------------
