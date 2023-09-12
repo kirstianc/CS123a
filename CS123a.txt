@@ -168,7 +168,7 @@ Quaternary structure (multiple polypeptides)
 - polypeptides that are physically close to each other to form the protein
 
 (what are the white segments of the figures shown?)
-- bends and turns in the protein, lot of interactions (with other molecules) occur at these points
+- the parts where other proteins can bind to the protein
 
 - usually inside are hydrophobic, outside are hydrophilic
 ---------------------------------------------
