@@ -10,8 +10,8 @@ Genomic Context (e.g. HBB)
 - Exon count: 3
 - if says "complement", then the sequence is reversed in the db (i.e. 3'-5' instead of 5'-3') - (reverse/template strand)
 
-if complement -> FASTA file -> look for "CAT" for start
-if not complement -> FASTA file -> look for "ATG" for start
+if complement -> FASTA file -> look for "TAC" for start (3' - 5' DNA, if RNA "UAC")
+if not complement -> FASTA file -> look for "ATG" for start (5' - 3' DNA, if RNA "AUG")
 
 related organisms:
 - look under Organisms on the left side of the page -> might be listed like "blah, blah, blah"
