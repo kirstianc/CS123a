@@ -37,3 +37,10 @@ exercise: OBP2B gene
 - location: 9q34.2 (chromosone 9, long arm, 24 section, 2nd subsection)
 - exon count: 11
 - dbvar (variants) - nsv5481140
+
+exercise: TP53 gene
+- tumor supressor protein
+- acc #: NC_000017.11 
+- location: 17p13.1
+- exon count: 13
+- protein aa length: 393 -> go back to search -> refseq protein -> top search "393 aa protein"
