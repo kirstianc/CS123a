@@ -1,0 +1,39 @@
+NCBI db
+
+Genomic Context (e.g. HBB)
+- Location: 11p15.4 (chromosome 11, short arm (p), block 15, sub-block 4)
+	- centromere: middle of chromosome
+		: p = short arm/side, q = long arm/side
+		: lower # = closer to centromere, higher # = farther from centromere
+		: banding (blocking) pattern (e.g. 11p15.4) = block 15, sub-block 4
+		: when given base pairs, start from end of chromosome
+- Exon count: 3
+- if says "complement", then the sequence is reversed in the db (i.e. 3'-5' instead of 5'-3') - (reverse/template strand)
+
+if complement -> FASTA file -> look for "CAT" for start
+if not complement -> FASTA file -> look for "ATG" for start
+
+related organisms:
+- look under Organisms on the left side of the page -> might be listed like "blah, blah, blah"
+- landing page, might display additional organisms
+
+Accession Numbers
+- NG_: gene
+- NC_: chromosome
+- NM_: mRNA
+- NP_: protein
+
+find info abt "GPCR [human]"
+search bar -> drop down - gene, "GPCR [human]" -> search
+
+exercise: UGT2A1 gene
+- encodes enzyme that lines nasal cavity and allows for smell detection
+- exon count: 9
+- location: 4q13.3 (4th chromosome, long arm, 13th section, 3rd sub-section)) 
+
+exercise: OBP2B gene 
+- odor binding protein
+- acc #: NC_000009.12
+- location: 9q34.2 (chromosone 9, long arm, 24 section, 2nd subsection)
+- exon count: 11
+- dbvar (variants) - nsv5481140
