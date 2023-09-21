@@ -236,3 +236,13 @@ From FASTA file, what is the start position of the first coding region? 0
 check version history: "?report=girevhist"
 regular -> ATG; complement -> TAC
 ---------------------------------------------
+Variants:
+
+Copy Number Variation (CNV)
+- deletion or duplication of a large segment of DNA
+
+Single Nucleotide Polymorphism (SNP)
+- single nucleotide change
+
+Insertion/Deletion (Indel/DELINS)
+- insertion or deletion of a small segment of DNA

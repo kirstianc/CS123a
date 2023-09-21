@@ -44,3 +44,10 @@ exercise: TP53 gene
 - location: 17p13.1
 - exon count: 13
 - protein aa length: 393 -> go back to search -> refseq protein -> top search "393 aa protein"
+
+--------------------
+Variant Viewer
+https://www.ncbi.nlm.nih.gov/variation/view/
+
+SNP (snip) is variation in a single nucleotide that occurs at a specific position in the genome --> starts with rs (reference SNP cluster)
+
