@@ -246,3 +246,45 @@ Single Nucleotide Polymorphism (SNP)
 
 Insertion/Deletion (Indel/DELINS)
 - insertion or deletion of a small segment of DNA
+
+---------------------------------------------
+Sequence Alignment
+- aligning sequences to find similarities
+
+: Pairwise Alignment - aligning two sequences for relatedness
+: Multiple Alignment - aligning 3+ sequences for relatedness
+: Global Alignment - aligning entire sequences
+: Local Alignment - aligning parts of sequences (find subset of sequences that are similar)
+
+P Value - significance measure to tell you how likely it is that the alignment is due to random events
+	: low value if you want the alignment to not be due to random events
+E value - expected number of alignments with the same score or better that would occur by chance
+	: low value if you want the alignment to not be due to random events
+
+3 algorithms include:
+: Dot Matrix Method
+: Dynamic Programming
+: Word Method
+
+Definitions
+: Similarity - quantitative measure based on sequence identity and pairwise alignment
+	- Seq Sim = # of positions that match / length of sequence
+: Identity - qualitative measure based on sequence similarity and pairwise alignment
+: Homology - extrapolated from similarity and usually implies an evolutionary link
+: Orthologs - genes separated by speciation and typically have same function, 3D structure, and domain structure
+	- domain structure - part of protein that has a specific function
+: Paralogs - genes separated by duplication and typically have different function, 3D structure, and domain structure
+
+Dotplot Method (Dot Matrix)
+- compares two sequences by plotting one sequence on the x-axis and the other on the y-axis
+- dot is placed where characters match at intersections 
+: useful for identifying regions of biological importance
+
+Cytochrome C Alignment example
+- What is Cytochrome C?
+
+Good Alignment hit on BLAST 
+- low E value (close to 0)
+- high ident (close to 100%)
+- high sim (close to 100%)
+
