@@ -288,3 +288,40 @@ Good Alignment hit on BLAST
 - high ident (close to 100%)
 - high sim (close to 100%)
 
+T-Score = (S - m) / s where S = score, m = mean, s = standard deviation
+Alignments whose T score do not decrease are compared to scores from random searches
+- if T score is higher than random searches, then the alignment is significant
+
+Similarity Score - score that is calculated based on the number of matches and mismatches
+- higher score = more similar = more likely to be related
+- lower score = less similar = less likely to be related
+- use corresponding matrix to calculate score (e.g. BLOSUM62)
+	: BLOSUM62 - matrix created w 62 similarity score
+	: PAM250 - matrix created w 250 similarity score
+	- e.g. comparing caveman and human today use a lower matrix score (e.g. BLOSUM62) since they are more likely to be different over time
+		(you would prefer like BLOSOM45 compared to BLOSOM90 in this case)
+
+Local alignment - aligning parts of sequences (find subset of sequences that are similar)
+- basically randomly align sequence and calculate T score and find highest T score/reaches threshold
+- add to left and right until score decreases
+- align left of sequence to left of T-score sequence and right of sequence to right of T-score sequence
+- repeat (can insert gaps if necessary)
+
+Calculate T Score
+- T = (S - m) / s
+
+using blosom62 matrix
+M E N G G P A P E S 
+I P A G G P A P E S 
+
+word size of 3
+M  E  N
+1 -1 -2 = -2
+I  P  A 
+
+C word location --> T Score threshold
+- add letters to left and right of C word
+	- if T score is higher than before -> continue
+	- if T score is lower than before -> stop
+
+Calculate S score (similarity score)
