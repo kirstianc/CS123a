@@ -325,3 +325,24 @@ C word location --> T Score threshold
 	- if T score is lower than before -> stop
 
 Calculate S score (similarity score)
+
+=============================================
+
+Protein Function --> mainly depends on 3D structure, not necessarily sequence
+
+Sequence Conservation implies Function
+- if sequence is conserved, then function is conserved 
+
+Similarity Score = # of matches / length of sequence
+
+PAM (Point Accepted Mutation) Matrix
+- matrix defines a time unit where 1 PAM is the time it takes for 1% of the amino acids to change
+- PAM1 matrix shows prob of amino acid at column j being replaced by aminog acid at row i 
+- PAM250 matrix shows prob of amino acid at column j being replaced by aminog acid at row i after 250 PAMs
+	: each value would be put to the power of 250 (multiply by itself)
+
+Multiple Sequence Alignment (MSA) - aligning 3+ sequences for relatedness
+	: Conserved Residues - residues that are the same in all sequences (same organism) --> MSA helps find these
+
+Ortholog - genes separated by speciation and typically have same function, 3D structure, and domain structure
+Paralog - genes separated by duplication and typically have different function, 3D structure, and domain structure
