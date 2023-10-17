@@ -32,60 +32,52 @@ AUTHOR: Ian Chavez
     - Getting ValueError from running
     "ValueError: sequence contains letters not in the alphabet"
     
+10/17/23:
+    MOD:     Part 1 done
+    AUTHOR:  Ian Chavez
+    COMMENT:
+    - Changed back to pairwise2 to keep consistent with assignment. 
+    Not trying to lose points because of a warning.
+
+    - Addressed multiple errors and warnings by using documentation found at: http://biopython.org/DIST/docs/tutorial/Tutorial.html
+
 ====================== END OF MODIFICATION HISTORY ============================
 """
-# Based on how http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html   
-#   describes pairwise local and global alignment using Biopython
-from Bio import Align
-from Bio.Align import substitution_matrices
-aligner = Align.PairwiseAligner()
-
 # Read in the sequences from the files: seq1.txt and seq2.txt
-#   and store them in variables
-seq1 = open("seq1.txt", "r")
-seq2 = open("seq2.txt", "r")
-seq1 = seq1.read()
-seq2 = seq2.read()
+# and store them in variables
+with open("seq1.txt", "r") as seq1_file:
+    lines = seq1_file.readlines()
+    seq1 = lines[1].strip()
 
-#TEST Print the sequences to the console
-#print("Sequence 1: ", seq1)
-#print("Sequence 2: ", seq2)
+with open("seq2.txt", "r") as seq2_file:
+    lines = seq2_file.readlines()
+    seq2 = lines[1].strip()
+
+# Import the pairwise2 module from Biopython
+from Bio import pairwise2
+from Bio.Align import substitution_matrices
+print("Imports successful")
+
+# Create a BLOSUM62 matrix
+matrix = substitution_matrices.load("BLOSUM62")
+print("Matrix created")
 
 # Global alignment using BLOSUM62 matrix
-aligner.mode = 'global'
-aligner.open_gap_score = -10
-aligner.extend_gap_score = -0.5
-aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
-alignment = aligner.align(seq1, seq2)
-for alignment in sorted(alignment):
-    print("Score = %.1f:" % alignment.score)
-    print(alignment)
+# and print the results to the console (using format_alignment function)
+print("Global alignment starting====================")
+for a in pairwise2.align.globaldx(seq1, seq2, matrix):
+    print(pairwise2.format_alignment(*a))
+print("Print global successful====================")
+
 
 # Local alignment using BLOSUM62 matrix
-aligner.mode = 'local'
-aligner.open_gap_score = -10
-aligner.extend_gap_score = -0.5
-aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
-alignment = aligner.align(seq1, seq2)
-for alignment in sorted(alignment):
-    print("Score = %.1f:" % alignment.score)
-    print(alignment)
-
-
-""" BASED ON PAIRWISE2 DOCUMENTATION BUT DEPRECATED
-# Global alignment using BLOSUM62 matrix
-#   and print the results to the console (using format_alignment function)
-alignments = pairwise2.align.globaldx(seq1, seq2, matrix)
-for a in alignments:
-    print(format_alignment(*a))
-
-# Local alignment using BLOSUM62 matrix
-#   and print the results to the console (using format_alignment function)
+# and print the results to the console (using format_alignment function)
+print("Local alignment starting====================")
 alignments = pairwise2.align.localdx(seq1, seq2, matrix)
 for a in alignments:
-    print(format_alignment(*a))
-"""
+    print(pairwise2.format_alignment(*a))
+print("Local alignment successful====================")
 
 # Close the files
-seq1.close()
-seq2.close()
+seq1_file.close()
+seq2_file.close()
