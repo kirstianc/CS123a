@@ -346,3 +346,33 @@ Multiple Sequence Alignment (MSA) - aligning 3+ sequences for relatedness
 
 Ortholog - genes separated by speciation and typically have same function, 3D structure, and domain structure
 Paralog - genes separated by duplication and typically have different function, 3D structure, and domain structure
+---------------------------------------------
+Phylogenetic Tree 
+- tree that shows evolutionary relationships between organisms
+- branch length = evolutionary distance
+
+---------------------------------------------
+UPGMA Tree Creation 
+- Unweighted Pair Group Method with Arithmetic Mean
+- used to create phylogenetic trees
+- used to find evolutionary relationships between organisms
+- basically:
+	> find smallest distance between 2 organisms in the matrix
+	> combine those 2 organisms into one organism (i.e. A, B -> AB)
+		> AB = (A + B) / 2
+	> create new matrix with AB and all other organisms
+	> repeat until all organisms are combined into one organism
+
+---------------------------------------------
+Neighbor-Joining Tree algorithm
+- does not assume constant rate of evolution (atomic clock)
+(UPGMA better for constant or relatively constant rate of evolution)
+- rooted tree -> tree with a root (i.e. common ancestor)
+- additive -> sum of branch lengths = distance between organisms
+- basically:
+	> calculate divergence/disimilarity score (sum of all distances between organisms, i.e. all A distances, all B distances, etc)
+	> recalculate matrix with divergence score (A distance - (A score + B score) / (n-2))
+		n = # of OTU's (organisms)
+		subtract 2 bc we are combining 2 organisms into one
+
+---------------------------------------------
