@@ -1,0 +1,12 @@
+NC_000007.14	human  36% - 60% 
+NC_000072.7	Mus musculus (house mouse)  42% - 66%
+NC_051339.1	Rattus norvegicus (Norway rat) 51% - 58%
+NC_051820.1 	Canis lupus familiaris (dog) 17% to 45%
+NC_036886.1	Pan troglodytes (chimpanzee) 35% - 45%
+
+
+
+
+
+
+

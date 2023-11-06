@@ -1,0 +1,52 @@
+PS C:\Users\kirst\Desktop\Github\CS123a\Programming Assignments\PA2> python .\pa2.py
+Starting program...
+
+Obtaining accession nums...
+['NC_000007.14', 'NC_000072.7', 'NC_051339.1', 'NC_051820.1', 'NC_036886.1']
+
+
+Obtaining GC count from file...
+{'human': [36.0, 60.0], 'house mouse': [42.0, 66.0], 'Norway rat': [51.0, 58.0], 'dog': [17.0, 45.0], 'chimpanzee': [35.0, 45.0]}
+
+
+Obtaining GC count from FASTA...
+{'Homo': [64696843, 161622347, 0], 'Mus': [60627727, 151725019, 0], 'Rattus': [75034167, 185297582, 0], 'Canis': [25474877, 62907233, 0], 'Pan': [62622214, 158275782, 0]}
+
+
+Computing GC content of FASTA...
+Homo 40.03%
+Mus 39.96%
+Rattus 40.49%
+Canis 40.50%
+Pan 39.57%
+
+
+Ranking organisms per entry...
+ACC: NC_000007.14
+RANK:
+1. chimpanzee
+2. human
+
+
+ACC: NC_000072.7
+RANK:
+1. chimpanzee
+2. human
+
+
+ACC: NC_051339.1
+RANK:
+1. chimpanzee
+2. human
+
+
+ACC: NC_051820.1
+RANK:
+1. chimpanzee
+2. human
+
+
+ACC: NC_036886.1
+RANK:
+1. chimpanzee
+2. human
