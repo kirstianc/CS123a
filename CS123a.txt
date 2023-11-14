@@ -365,7 +365,7 @@ UPGMA Tree Creation
 
 ---------------------------------------------
 Neighbor-Joining Tree algorithm
-- does not assume constant rate of evolution (atomic clock)
+- does not assume constant rate of evolution (atomic clock) --> advantage? use a longer time period between organisms
 (UPGMA better for constant or relatively constant rate of evolution)
 - rooted tree -> tree with a root (i.e. common ancestor)
 - additive -> sum of branch lengths = distance between organisms
@@ -374,5 +374,90 @@ Neighbor-Joining Tree algorithm
 	> recalculate matrix with divergence score (A distance - (A score + B score) / (n-2))
 		n = # of OTU's (organisms)
 		subtract 2 bc we are combining 2 organisms into one
-
+	> repeat until all organisms are combined into one organism
 ---------------------------------------------
+og dist matrix: 
+		A	B	C	D	E	F
+	A	x				
+	B	5	x			
+	C	4	7	x	
+	D	7	10	7	x	
+	E	6	9	6	5	x	
+	F	8	11	8	9	8	x
+
+divergence matrix:
+	r(A) = 5 + 4 + 7 + 6 + 8 = 30
+	r(B) = 5 + 7 + 10 + 9 + 11 = 42
+	r(C) = 4 + 7 + 7 + 6 + 8 = 32
+	r(D) = 7 + 10 + 7 + 5 + 9 = 38
+	r(E) = 6 + 9 + 6 + 5 + 8 = 34
+	r(F) = 8 + 11 + 8 + 9 + 8 = 44
+
+new dist 
+A B: 5 - ((30 + 42)) / (6-2) = -13
+A C: 4 - ((30 + 32)) / (6-2) = -11.5
+A D: 7 - ((30 + 38)) / (6-2) = -10
+...
+
+new dist matrix:
+	A		B		C 		D		E		F
+A	x	
+B	-13		x	
+C	-11.5	-11.5	x
+D	-10		-10		-10.5	x
+E	-10		-10		-10.5	-13		x
+F	-10.5	-10.5	-11		-11.5	-11.5	x
+
+combine A and B -> U (-13) is lowest (randomly choosing between AB and DE)
+calculate branch length from U to A and B
+S(AU) = d(AB) / 2 + ((r(A) - r(B)) / 2(n-2))
+		= 5 / 2 + ((30 - 42) / 2(6-2)) = 2.5 - 1.5 = 1
+S(BU) = d(AB) - S(AU) 
+		= 5 - 1 = 4
+
+new dist:
+d(CU) = (d(AC) + d(BC) - d(AB)) / 2 
+		= (4 + 7 - 5) / 2 = 3
+d(DU) = (d(AD) + d(BD) - d(AB)) / 2
+		= (7 + 10 - 5) / 2 = 6
+d(EU) = (d(AE) + d(BE) - d(AB)) / 2
+		= (6 + 9 - 5) / 2 = 5
+d(FU) = (d(AF) + d(BF) - d(AB)) / 2
+		= (8 + 11 - 5) / 2 = 7
+
+new dist matrix: (add U row/col but just add the rest from og matrix)
+	U	C	D	E	F
+U	x
+C	3	x
+D	6	7	x
+E	5	6	5	x
+F	7	8	9	8	x
+
+calculate divergence score:
+r(U) = 3 + 6 + 5 + 7 = 21
+r(C) = 3 + 7 + 6 + 8 = 24
+r(D) = 6 + 7 + 5 + 9 = 27
+r(E) = 5 + 6 + 5 + 8 = 24
+r(F) = 7 + 8 + 9 + 8 = 32
+
+new dist:
+U C: 3 - ((21 + 24)) / 5-2 = -12
+U D: 6 - ((21 + 27)) / 5-2 = -10
+U E: 5 - ((21 + 24)) / 5-2 = -10
+U F: 7 - ((21 + 32)) / 5-2 = -10.7
+...
+
+new dist matrix: 
+	U		C		D		E		F
+U	x
+C	-12		x
+D	-10		-10		x
+E	-10		-10		-12		x
+F	-10.7	-10.7	-10.7	-10.7	x
+
+combine U and C into node W, (randomly choosing between UC and DE) because -12 is lowest
+calculate branch length from between UW and CW
+S(CW) = d(CU) / 2 + ((r(C) - r(U)) / 2(n-2))
+		= 3 / 2 + ((24 - 21) / 2(5-2)) = 1.5 + .5 = 2
+S(UW) = d(CU) - S(CW)
+		= 3 - 2 = 1
