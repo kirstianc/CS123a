@@ -415,6 +415,14 @@ S(AU) = d(AB) / 2 + ((r(A) - r(B)) / 2(n-2))
 S(BU) = d(AB) - S(AU) 
 		= 5 - 1 = 4
 
+--- if you wanted to start w BU first ---
+S(BU) = d(AB)/2 + [(r(B) - r(A) )/ 2(n-2)]
+		= 5/2 + [(42 - 30) / 2(6-2)] = 2.5 + 1.5 = 4
+S(AU) = d(AB) - S(BU)
+		= 5 - 4 = 1
+-----------------------------------------
+
+
 new dist:
 d(CU) = (d(AC) + d(BC) - d(AB)) / 2 
 		= (4 + 7 - 5) / 2 = 3
@@ -461,3 +469,12 @@ S(CW) = d(CU) / 2 + ((r(C) - r(U)) / 2(n-2))
 		= 3 / 2 + ((24 - 21) / 2(5-2)) = 1.5 + .5 = 2
 S(UW) = d(CU) - S(CW)
 		= 3 - 2 = 1
+
+---------------------------------------------
+Gene Editing
+- i.e. CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats)
+- underlying idea came from bacteria protecting themselves from viruses
+- bacteria have CRISPR array that contains spacer sequences (i.e. DNA from viruses) that are used to recognize 
+	and destroy viruses' DNA that are injected. After the bacteria defends itself, they cut the DNA and
+	insert it into the CRISPR array as a spacer sequence. The spacer sequence is then used to recognize the
+	virus' DNA in the future and destroy it.
